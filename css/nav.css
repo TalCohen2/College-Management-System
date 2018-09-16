@@ -1,0 +1,19 @@
+body > nav > div > div.navbar-header > a {
+    background: #f8f4f4 url(https://img00.deviantart.net/4f94/i/2013/226/0/4/shield__no_background__by_silver2012-d6i2cfg.png) no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+#bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right > img{
+    margin-top: 2px;
+    object-fit: cover;
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    margin-left:5px; 
+}
+
+#bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right > li > a {
+    padding: 0;
+}

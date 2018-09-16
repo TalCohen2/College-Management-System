@@ -1,0 +1,73 @@
+body > div > div.col-md-8.well.well-sm > div > img {
+    background-color: rgb(255, 242, 242);
+    object-fit: cover;
+    width: 300px;
+    height: 300px;  
+    border-radius: 10px;
+}
+
+body > div > div.col-md-8.well.well-sm > div > a > img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+
+body > div > div.col-md-8.well.well-sm > div:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+body > div > div.col-md-8.well.well-sm > div:nth-child(5) {
+    margin-top: 10px;
+    overflow-y: auto;
+    height: 160px;
+}
+
+body > div > div.col-md-8.well.well-sm > div:nth-child(5) > a {
+    padding: 0;
+}
+
+body > div > div.col-md-8.well.well-sm > div:nth-child(5) > a > img {
+    margin-bottom: 10px;
+}
+
+body > div > div.col-md-8.well.well-sm > div:nth-child(5) > a > p {
+    position: absolute;
+    top: 102px;
+    width: 110px;
+    background-color: rgba(108, 255, 248, 0.7);
+    margin: 0 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    word-break: break-all;
+    overflow: hidden;
+    height: 20px;
+}
+
+body > div > div.col-md-8.well.well-sm > div.col-md-7 > .description { 
+    overflow-x: auto;
+    height: 220px;
+    word-break: break-word;
+}
+
+body > div > div.col-md-8.well.well-sm > div.col-md-7 > span {
+    display: block;
+}
+
+body > div > div.col-md-8.well.well-sm > div.col-md-7 > h2 {
+    display: inline;
+}
+
+body > div > div.col-md-8.well.well-sm > div.col-md-7 > .signed {
+    display: inline;
+    font-size: 1.5em;
+}
+
+body > div > div.col-md-8.well.well-sm {
+    padding: 20px;
+}
+
+body > div > div.col-md-8.well.well-sm > div:nth-child(1) > span {
+    margin: 0;
+    padding: 12px;
+}
