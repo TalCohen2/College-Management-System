@@ -1,6 +1,6 @@
 <div class="col-md-12 rows">
   <div class="col-md-2 adminshow">
-    <h3>Administration<a href="/College-Managment-System/adminstration/addAdmin" class="pull-right glyphicon glyphicon-plus"></a></h3>
+    <h3>Administration<a href="/College-Management-System/adminstration/addAdmin" class="pull-right glyphicon glyphicon-plus"></a></h3>
     <ul id="list-example" class="list-group">
     <?php
       $admins = $this->data['admins']['count'];
@@ -10,10 +10,10 @@
           $i++;
         }
         echo <<<HTM
-        <a class="list-group-item list-group-item-action col-md-12" href="/College-Managment-System/adminstration/edit/{$admins[$i]['id']}"><li>
+        <a class="list-group-item list-group-item-action col-md-12" href="/College-Management-System/adminstration/edit/{$admins[$i]['id']}"><li>
           <li>
           <section class="col-md-3">
-            <img src='/College-Managment-System/image/{$admins[$i]['image']}'>
+            <img src='/College-Management-System/image/{$admins[$i]['image']}'>
           </section>
           <section class="col-md-8 pull-right">
             <span>{$admins[$i]['first_name']} {$admins[$i]['last_name']}, {$admins[$i]['role_name']}</span>

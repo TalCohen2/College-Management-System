@@ -1,7 +1,7 @@
 var f = document.forms.logForm;
 f.elements.login.onclick = function() {
     if(validation()) {
-        f.action ='/College-Managment-System/login';
+        f.action ='/College-Management-System/login';
         f.submit();
     }
 }

@@ -104,7 +104,7 @@ class School {
             break;
             case 'addcourse':
                 if(session::logged()['role_id']=='3') {
-                  header ("location: /College-Managment-System");
+                  header ("location: /College-Management-System");
                 }
                 else {
                   $ac = [
@@ -138,7 +138,7 @@ class School {
             break;
             case 'editcourse':
               if(session::logged()['role_id']=='3') {
-                header ("location: /College-Managment-System");
+                header ("location: /College-Management-System");
               }
               else {
                 $cd = $s->getCourse($value);
@@ -164,7 +164,7 @@ class School {
     function manageStudent($route,$value) {
         $logged = session::logged();
         if(!$logged||empty($value)) {
-          header("location: /College-Managment-System");
+          header("location: /College-Management-System");
         }
         else {
           $sm = new schoolModel();
@@ -185,21 +185,21 @@ class School {
                     'image' => $path
                   ];
                   $i = $sm->createStudent($value);
-                  header("location: /College-Managment-System/showperson/{$i}/new");
+                  header("location: /College-Management-System/showperson/{$i}/new");
                 }
                 else {
-                  header("location: /College-Managment-System/addstudent/1");
+                  header("location: /College-Management-System/addstudent/1");
                 }
               }
               else {
-                header("location: /College-Managment-System/addstudent/2");
+                header("location: /College-Management-System/addstudent/2");
               }
             break;
             case 'delete':
               $path = $sm->getStudent($value);
               $u->deleteImage($path['image']);
               $sm->deleteStudent($value);
-              header("location: /College-Managment-System/deleted");
+              header("location: /College-Management-System/deleted");
             break;
             case 'edit':
               $flag = TRUE;
@@ -217,14 +217,14 @@ class School {
                     $value['image'] = $path;
                   }
                   $i = $sm->updateStudent($value);
-                  header("location: /College-Managment-System/showperson/{$i}/edited");
+                  header("location: /College-Management-System/showperson/{$i}/edited");
                 }
                 else {
-                  header("location: /College-Managment-System/editstudent/{$value['id']}/1");
+                  header("location: /College-Management-System/editstudent/{$value['id']}/1");
                 }
               }
               else {
-                header("location: /College-Managment-System/editstudent/{$value['id']}/2");
+                header("location: /College-Management-System/editstudent/{$value['id']}/2");
               }
             break;
           }
@@ -234,7 +234,7 @@ class School {
       function manageCourse($route,$value) {
         $logged = session::logged();
         if(!$logged||empty($value)||$logged['role_id']=='3') {
-          header("location: /College-Managment-System");
+          header("location: /College-Management-System");
         }
         else {
           $sm = new schoolModel();
@@ -255,26 +255,26 @@ class School {
                     'image' => $path
                   ];
                   $i = $sm->createCourse($value);
-                  header("location: /College-Managment-System/showcourse/{$i}/new");
+                  header("location: /College-Management-System/showcourse/{$i}/new");
                 }
                 else {
-                  header("location: /College-Managment-System/addcourse/1");
+                  header("location: /College-Management-System/addcourse/1");
                 }
               }
               else {
-                header("location: /College-Managment-System/addcourse/2");
+                header("location: /College-Management-System/addcourse/2");
               }
             break;
             case 'delete':
               $sc = $sm->getStudentByCourse($value);
               if(!empty($sc)) {
-                header("location: /College-Managment-System/editcourse/{$value}/3");
+                header("location: /College-Management-System/editcourse/{$value}/3");
               }
               else {
                 $path = $sm->getCourse($value);
                 $u->deleteImage($path['image']);
                 $sm->deleteCourse($value);
-                header("location: /College-Managment-System/deleted");
+                header("location: /College-Management-System/deleted");
               }
             break;
             case 'edit':
@@ -293,14 +293,14 @@ class School {
                     $value['image'] = $path;
                   }
                   $i = $sm->updateCourse($value);
-                  header("location: /College-Managment-System/showcourse/{$i}/edited");
+                  header("location: /College-Management-System/showcourse/{$i}/edited");
                 }
                 else {
-                  header("location: /College-Managment-System/editcourse/{$value['id']}/1");
+                  header("location: /College-Management-System/editcourse/{$value['id']}/1");
                 }
               }
               else {
-                header("location: /College-Managment-System/editcourse/{$value['id']}/2");
+                header("location: /College-Management-System/editcourse/{$value['id']}/2");
               }
             break;
           }

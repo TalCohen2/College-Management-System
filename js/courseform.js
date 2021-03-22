@@ -2,7 +2,7 @@ var f = document.forms.courseform;
 if(f.elements.add) {
     f.elements.add.onclick = function() {
         if(validation()) {
-            f.action ='/College-Managment-System/managecourse/add';
+            f.action ='/College-Management-System/managecourse/add';
             f.submit();
         }
     }
@@ -12,7 +12,7 @@ if(f.elements.edit) {
     f.elements.edit.onclick = function(e) {
         if(validation()) {
             var id = e.target.getAttribute('data-id');
-            f.action ='/College-Managment-System/managecourse/edit/' +id;
+            f.action ='/College-Management-System/managecourse/edit/' +id;
             f.submit();
         }
     }
@@ -23,7 +23,7 @@ if(f.elements.delete) {
         if(confirm("are you sure?")) {
             var id = e.target.getAttribute('data-id');
             var name = e.target.getAttribute('name');
-            location.href = "/College-Managment-System/managecourse/delete/" + id;
+            location.href = "/College-Management-System/managecourse/delete/" + id;
         }
     }
 }

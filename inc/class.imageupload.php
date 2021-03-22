@@ -22,7 +22,7 @@ class imageUpload {
                         throw new RuntimeException("Invalid file type {$ext}");
                     }
                     $filename = $logged['first_name'] . time() . '.' . $ext;
-                    rename($f['tmp_name'],'../College-Managment-System/image/'.$filename);
+                    rename($f['tmp_name'],'../College-Management-System/image/'.$filename);
                     $uploaded['result'] = $filename;
                     }
                     catch(RuntimeException $e) {
@@ -48,7 +48,7 @@ class imageUpload {
     }
 
     function deleteImage($param) {
-        unlink ("../College-Managment-System/image/{$param}");
+        unlink ("../College-Management-System/image/{$param}");
     }
 
 }

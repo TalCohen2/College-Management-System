@@ -1,15 +1,15 @@
 <div class="col-md-12 rows">
   <div class="col-md-2">
-    <h3>Courses<?php echo $this->data['logged']['role_id']!= '3' ? "<a href=\"/College-Managment-System/addcourse\" class=\"glyphicon glyphicon-plus pull-right\"></a>" : '' ?></h3>
+    <h3>Courses<?php echo $this->data['logged']['role_id']!= '3' ? "<a href=\"/College-Management-System/addcourse\" class=\"glyphicon glyphicon-plus pull-right\"></a>" : '' ?></h3>
     <ul id="list-example" class="list-group">
     <?php
       $courses = $this->data['courses']['count'];
       echo "<div class='list'>";
       for($i=0;$i<count($courses);$i++) {
         echo <<<HTM
-        <a class="list-group-item list-group-item-action col-md-12" href="/College-Managment-System/showcourse/{$courses[$i]['id']}"><li>
+        <a class="list-group-item list-group-item-action col-md-12" href="/College-Management-System/showcourse/{$courses[$i]['id']}"><li>
           <section class="col-md-4">
-            <img src='/College-Managment-System/image/{$courses[$i]['image']}'>
+            <img src='/College-Management-System/image/{$courses[$i]['image']}'>
           </section>
           <section class="col-md-7 col-md-push-1">
             <span>{$courses[$i]['name']}</span>
@@ -22,16 +22,16 @@ HTM;
     </ul>  
   </div>
   <div class="col-md-2">
-    <h3>Students<a href="/College-Managment-System/addstudent" class="glyphicon glyphicon-plus pull-right"></a></h3>
+    <h3>Students<a href="/College-Management-System/addstudent" class="glyphicon glyphicon-plus pull-right"></a></h3>
     <ul id="list-example" class="list-group">
     <?php
       $students = $this->data['students']['count'];
       echo "<div class='list'>";
       for($i=0;$i<count($students);$i++) {
         echo <<<HTM
-        <a class="list-group-item list-group-item-action col-md-12" href="/College-Managment-System/showperson/{$students[$i]['id']}"><li>
+        <a class="list-group-item list-group-item-action col-md-12" href="/College-Management-System/showperson/{$students[$i]['id']}"><li>
           <section class="col-md-4">
-            <img src='/College-Managment-System/image/{$students[$i]['image']}'>
+            <img src='/College-Management-System/image/{$students[$i]['image']}'>
           </section>
           <section class="col-md-7 col-md-push-1">
             <span>{$students[$i]['first_name']} {$students[$i]['last_name']}</span>

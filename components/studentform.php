@@ -75,7 +75,7 @@ HTM;
   if(isset($data['id'])) {
     echo <<<HTM
         <div class="col-md-3 col-md-push-1">
-          <img src='/College-Managment-System/image/{$data['image']}' class="pull-right">
+          <img src='/College-Management-System/image/{$data['image']}' class="pull-right">
         </div>
 HTM;
   }

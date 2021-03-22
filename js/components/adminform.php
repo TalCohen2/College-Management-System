@@ -98,7 +98,7 @@ HTM;
     <div class="col-md-3 col-md-push-1">
       <?php
         if(isset($data['image'])) {
-          echo "<img src=\"/College-Managment-System/image/{$data['image']}\" class='pull-right'>";
+          echo "<img src=\"/College-Management-System/image/{$data['image']}\" class='pull-right'>";
         }
       ?>
     </div>

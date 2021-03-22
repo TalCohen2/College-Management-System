@@ -24,7 +24,7 @@ echo <<<HTM
                 <span><span class='glyphicon glyphicon-envelope'></span> {$this->data['data']['email']}</span>
         </div>
         <div>
-                <img src='/College-Managment-System/image/{$this->data['data']['image']}' class="pull-right">
+                <img src='/College-Management-System/image/{$this->data['data']['image']}' class="pull-right">
         </div>
 HTM;
 if(!empty($this->data['data']['courses'])) {
@@ -33,8 +33,8 @@ if(!empty($this->data['data']['courses'])) {
         echo "<div class='col-md-12'>";
         for($i=0;$i<count($courses);$i++) {
                 echo <<<HTM
-                <a class="col-md-2" href="/College-Managment-System/showcourse/{$courses[$i]['id']}">
-                        <img class="img-circle" src='/College-Managment-System/image/{$courses[$i]['image']}'>
+                <a class="col-md-2" href="/College-Management-System/showcourse/{$courses[$i]['id']}">
+                        <img class="img-circle" src='/College-Management-System/image/{$courses[$i]['image']}'>
                         <p class="text-center">{$courses[$i]['name']}</p>
                 </a>
 HTM;

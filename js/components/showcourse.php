@@ -42,7 +42,7 @@ echo <<<HTM
                 <span class="description">{$this->data['data']['description']}</span>
         </div>
         <div col-md-3>
-                <img src='/College-Managment-System/image/{$this->data['data']['image']}' class="pull-right">
+                <img src='/College-Management-System/image/{$this->data['data']['image']}' class="pull-right">
         </div>
 HTM;
 if(isset($student)) {
@@ -50,8 +50,8 @@ if(isset($student)) {
         echo "<div class='col-md-12'>";
         for($i=0;$i<count($student);$i++) {
                 echo <<<HTM
-                <a class="col-md-2" href="/College-Managment-System/showperson/{$student[$i]['id']}">
-                <img class="img-circle" src='/College-Managment-System/image/{$student[$i]['image']}'>
+                <a class="col-md-2" href="/College-Management-System/showperson/{$student[$i]['id']}">
+                <img class="img-circle" src='/College-Management-System/image/{$student[$i]['image']}'>
                 <p class="text-center">{$student[$i]['first_name']} {$student[$i]['last_name']}</p>
                 </a>
 HTM;

@@ -30,7 +30,7 @@ class Admin {
         $v->dump();
     }
     else {
-      header("location: /College-Managment-System");
+      header("location: /College-Management-System");
     }
   }
 
@@ -54,7 +54,7 @@ class Admin {
         case 'edit':
             $ad = $a->getAdmin($value);
             if(session::logged()['role_id']=='2' && $ad['role_id'] != '3' && session::logged()['id'] != $ad['id']) {
-              header("location: /College-Managment-System/adminstration");
+              header("location: /College-Management-System/adminstration");
             }
             else {
               $ad += $a->getRoles();
@@ -109,19 +109,19 @@ class Admin {
           ]);
         }
       }
-      header("location: /College-Managment-System/{$notice}");
+      header("location: /College-Management-System/{$notice}");
     }
   }
 
   function logout() {
     session::logout();
-    header("location: /College-Managment-System");
+    header("location: /College-Management-System");
   }
 
   function manageAdmin($route,$value) {
     $logged = session::logged();
     if(!$logged||empty($value)||$logged['role_id']=='3') {
-      header("location: /College-Managment-System");
+      header("location: /College-Management-System");
     }
     else {
       $am = new adminModel();
@@ -130,7 +130,7 @@ class Admin {
       switch($route) {
         case 'add':
           if($value['role']=='1' || $logged['role_id']=='2' && $value['role']!='3') {
-            header ("location: /College-Managment-System/adminstration/addAdmin/");
+            header ("location: /College-Management-System/adminstration/addAdmin/");
           }
           else {
             $flag = TRUE;
@@ -149,14 +149,14 @@ class Admin {
                 $ph = new PasswordHash();
                 $value['password'] = $ph->getHash($value['password']);
                 $am->createAdmin($value);
-                header("location: /College-Managment-System/adminstration/notice/added");
+                header("location: /College-Management-System/adminstration/notice/added");
               }
               else {
-                header("location: /College-Managment-System/adminstration/addAdmin/1");
+                header("location: /College-Management-System/adminstration/addAdmin/1");
               }
             }
             else {
-              header("location: /College-Managment-System/adminstration/addAdmin/2");
+              header("location: /College-Management-System/adminstration/addAdmin/2");
             }
           }
         break;
@@ -164,25 +164,25 @@ class Admin {
           $path = $am->getAdmin($value);
           if($logged['id']==$path['id'] || $logged['role_id']==$path['role_id'] || $path['role_id']=='1') {
             if($logged['id']==$path['id']) {
-            header("location: /College-Managment-System/adminstration/edit/{$value}/4");
+            header("location: /College-Management-System/adminstration/edit/{$value}/4");
             }
             else {
-              header("location: /College-Managment-System/adminstration");
+              header("location: /College-Management-System/adminstration");
             }
           }
           else {
             $u->deleteImage($path['image']);
             $am->deleteAdmin($value);
-            header("location: /College-Managment-System/adminstration/notice/deleted");
+            header("location: /College-Management-System/adminstration/notice/deleted");
           }
         break;
         case 'edit':
           if($value['role']=='1' && $logged['role_id']!='1' || $value['role']=='1' && $logged['id']!=$value['id'] || $logged['role_id']=='2' && $value['role']!='3' && $value['id']!=$logged['id'] || $value['id']==$logged['id'] && $value['role']!=$logged['role_id']) {
             if($value['id']==$logged['id'] && $value['role']!=$logged['role_id']) {
-              header("location: /College-Managment-System/adminstration/edit/{$value['id']}/3");
+              header("location: /College-Management-System/adminstration/edit/{$value['id']}/3");
             }
             else {
-              header("location: /College-Managment-System/adminstration/edit/{$value['id']}/4");
+              header("location: /College-Management-System/adminstration/edit/{$value['id']}/4");
             }
           }
           else {
@@ -210,14 +210,14 @@ class Admin {
                   }
                 }
                 $am->updateAdmin($value);
-                header("location: /College-Managment-System/adminstration/notice/edited");
+                header("location: /College-Management-System/adminstration/notice/edited");
               }
               else {
-                header("location: /College-Managment-System/adminstration/edit/{$value['id']}/1");
+                header("location: /College-Management-System/adminstration/edit/{$value['id']}/1");
               }
             }
             else {
-              header("location: /College-Managment-System/adminstration/edit/{$value['id']}/2");
+              header("location: /College-Management-System/adminstration/edit/{$value['id']}/2");
             }
           }
         break;

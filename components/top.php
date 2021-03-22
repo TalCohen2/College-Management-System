@@ -9,7 +9,7 @@
     <?php
     if(!empty($this->css)) {
         for ($i=0;$i<count($this->css);$i++) {
-            echo "<link rel=\"stylesheet\" href=\"/College-Managment-System/css/{$this->css[$i]}\">";
+            echo "<link rel=\"stylesheet\" href=\"/College-Management-System/css/{$this->css[$i]}\">";
         }
     }
 ?>
@@ -18,7 +18,7 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/College-Managment-System"></a>
+      <a class="navbar-brand" href="/College-Management-System"></a>
     </div>
 <?php
   if($this->data['logged']) {

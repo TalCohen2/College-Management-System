@@ -67,7 +67,7 @@ if(count($route)>0) {
                 }
             }
             else {
-                header("location: /College-Managment-System");
+                header("location: /College-Management-System");
             }
         break;
         case 'addcourse':
@@ -101,7 +101,7 @@ if(count($route)>0) {
                 }
             }
             else {
-                header("location: /College-Managment-System");
+                header("location: /College-Management-System");
             }
         break;
         case 'adminstration':
